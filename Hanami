@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hana Mi | Learn Vietnamese</title>
+  <meta name="description" content="Learn Vietnamese with Hana Mi. Private lessons, vocabulary and learning resources.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">Hana Mi<span>.</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#shop">Vocabulary Shop</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <button class="login-btn" onclick="showAuth()">
+    Log in / Sign up
+  </button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO HANA MI</p>
+    <h1>Discover the beauty<br>of the Vietnamese language.</h1>
+    <p>
+      Learn Vietnamese naturally through conversations,
+      practical lessons and Vietnamese culture.
+    </p>
+    <div class="hero-buttons">
+      <a href="#courses" class="primary-btn">Explore courses</a>
+      <a href="#about" class="secondary-btn">Meet your teacher</a>
+    </div>
+    <p class="small-note">Learn at your own pace ♡</p>
+  </div>
+  <div class="hero-image">
+    <div class="image-placeholder">
+      <span>HANA MI</span>
+      <p>Vietnamese Learning Studio</p>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <p class="eyebrow">WHY HANA MI?</p>
+  <h2>Vietnamese learning, made personal.</h2>
+  <p>
+    From your first Vietnamese words to everyday conversations,
+    every lesson is designed to help you communicate with confidence.
+  </p>
+</section>
+
+<section class="section" id="courses">
+  <p class="eyebrow">LEARN WITH ME</p>
+  <h2>Choose your learning experience</h2>
+
+  <div class="cards">
+    <article class="card">
+      <span class="card-number">01</span>
+      <h3>Beginner Vietnamese</h3>
+      <p>Learn pronunciation, tones, vocabulary and essential grammar.</p>
+      <a href="#booking">Explore lessons →</a>
+    </article>
+
+    <article class="card">
+      <span class="card-number">02</span>
+      <h3>Everyday Conversation</h3>
+      <p>Practice real-life Vietnamese for daily communication.</p>
+      <a href="#booking">Explore lessons →</a>
+    </article>
+
+    <article class="card">
+      <span class="card-number">03</span>
+      <h3>Vietnamese Culture</h3>
+      <p>Discover Vietnamese traditions, expressions and culture.</p>
+      <a href="#booking">Explore lessons →</a>
+    </article>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div>
+    <p class="eyebrow">STUDY MATERIALS</p>
+    <h2>Your Vietnamese vocabulary library.</h2>
+    <p>
+      Downloadable vocabulary packs with explanations,
+      examples, translations and practice exercises.
+    </p>
+    <a class="primary-btn" href="#products">Visit the shop</a>
+  </div>
+
+  <div class="product-card" id="products">
+    <div class="product-cover">HANA MI<br>VOCABULARY</div>
+    <h3>Vietnamese Vocabulary Pack</h3>
+    <p>PDF · Examples · Exercises · Audio</p>
+    <strong>$5.00</strong>
+  </div>
+</section>
+
+<section class="section booking" id="booking">
+  <p class="eyebrow">PRIVATE LESSONS</p>
+  <h2>Let's learn Vietnamese together.</h2>
+
+  <div class="cards">
+    <article class="card">
+      <h3>60 minutes</h3>
+      <h2>$10</h2>
+      <p>One personalized Vietnamese lesson.</p>
+    </article>
+    <article class="card">
+      <h3>90 minutes</h3>
+      <h2>$15</h2>
+      <p>More time for conversation and practice.</p>
+    </article>
+    <article class="card featured">
+      <h3>Learning Package</h3>
+      <h2>$54</h2>
+      <p>6 lessons over 3 weeks.</p>
+    </article>
+  </div>
+
+  <a class="primary-btn" href="mailto:thaomy29112007@gmail.com?subject=Vietnamese%20Lesson%20Booking">
+    Book a lesson
+  </a>
+</section>
+
+<section class="about" id="about">
+  <p class="eyebrow">MEET YOUR TEACHER</p>
+  <h2>Xin chào, I'm Hana Mi!</h2>
+  <p>
+    I'm a Vietnamese tutor who loves languages,
+    cultural exchange and helping international learners
+    discover the Vietnamese language.
+  </p>
+  <p>Let's make learning Vietnamese a lovely experience.</p>
+</section>
+
+</main>
+
+<footer>
+  <a class="logo" href="#">Hana Mi<span>.</span></a>
+  <p>Learn Vietnamese with confidence ♡</p>
+  <p>© 2026 Hana Mi. All rights reserved.</p>
+</footer>
+
+<!-- Authentication modal -->
+<div id="auth-modal" class="modal">
+  <div class="modal-box">
+    <button class="close" onclick="hideAuth()">×</button>
+    <h2>Welcome to Hana Mi</h2>
+    <p>Create your learning account.</p>
+
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="Email address" required>
+      <input type="password" id="password" placeholder="Password (at least 6 characters)" minlength="6" required>
+      <button type="submit" class="primary-btn">Log in</button>
+    </form>
+
+    <button class="text-btn" onclick="toggleAuth()">
+      Don't have an account? Sign up
+    </button>
+    <p id="auth-message"></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
